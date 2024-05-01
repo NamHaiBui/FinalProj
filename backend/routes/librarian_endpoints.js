@@ -52,7 +52,7 @@ librarianRouter.put('/:id', async (req, res) => {
         res.json({ message: 'Librarian updated successfully' });
     } catch (err) {
         console.error(err);
-        res.error(500).json({ error: 'Error updating librarian' });
+        res.status(500).json({ error: 'Error updating librarian' });
     }
 });
-export default librarian;
+export default librarianRouter;
