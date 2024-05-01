@@ -2,9 +2,9 @@ import mysql from "mysql"
 
 const connectionConfig = {
     host: "localhost",
-    user: "root",
-    password: "MeapBoi3!",
-    database: "library"
+    user: process.env.MYSQLUSER,
+    password: process.env.MYSQLPASSWORD,
+    database: process.env.MYSQLDBNAME
 };
 
 async function executeQuery(query, params) {

@@ -1,5 +1,5 @@
 import executeQuery from "./database";
-// Sample Seed Data - Add more as needed
+// Sample Seed Data 
 const sampleBooks = [
     { title: 'The Hitchhiker\'s Guide to the Galaxy', authors: 'Douglas Adams', isbn: '9780345391803', publicationYear: 1979, category: 'Science Fiction', availability: 'Yes' },
     // ... more book objects
@@ -47,8 +47,6 @@ async function populateDatabase() {
                 "INSERT INTO librarians (Name, Email) VALUES (?, ?, ?)",
                 [librarian.name, librarian.email]);
         }
-
-        connection.end();
         console.log('Database population complete!');
 
     } catch (error) {
